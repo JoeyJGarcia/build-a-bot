@@ -1,5 +1,11 @@
 <template>
   <div id="app">
+    <!-- Root Foo: {{rootFoo}} <br/>
+    Robots Foo: {{robotsFoo}} <br/>
+    Users Foo: {{usersFoo}} <br/>
+    <br/>
+    Root Getter Foo: {{rootGetterFoo}} <br/>
+    Robots Getter Foo: {{robotsGetterFoo}} <br/> -->
     <header>
       <nav>
         <ul>
@@ -9,10 +15,18 @@
             Build-a-Bot
             </router-link>
           </li>
-           <li>
+          <li>
             <router-link class="nav-link two" :to="{name: 'Build'}" exact >
             Build
             </router-link>
+          </li>
+          <li>
+            <router-link class="nav-link cart" to="/cart" exact >
+            Cart
+            </router-link>
+            <div class="cart-items">
+              {{cart.length}}
+            </div>
           </li>
         </ul>
       </nav>
@@ -29,8 +43,22 @@
 </template>
 
 <script>
+import { mapState, mapGetters } from 'vuex';
+
 export default {
   name: 'App',
+  computed: {
+    ...mapState({
+      rootFoo: 'foo',
+      usersFoo: (state) => state.users.foo,
+    }),
+    ...mapState('robots', { robotsFoo: 'foo' }), /* This works bc it is namespaced */
+    ...mapGetters({ rootGetterFoo: 'foo' }),
+    ...mapGetters('robots', { robotsGetterFoo: 'foo' }),
+    cart() {
+      return this.$store.state.robots.cart;
+    },
+  },
 };
 </script>
 
@@ -82,6 +110,14 @@ ul {
       top: 3px;
       left: 6px;
 }
+
+.nav-link.cart {
+  position: relative;
+  margin-left: auto;
+  border-right: none;
+  top: 3px;
+  left: 26px;
+}
 .router-link-active {
   color: white;
 }
@@ -95,5 +131,17 @@ ul {
   background-color: #aaa;
   width: 100px;
   min-height: 300px;
+}
+
+.cart-items {
+  position: relative;
+  top: -7px;
+  right: -23px;
+  font-size: 12px;
+  width: 20px;
+  text-align: center;
+  display: inline-block;
+  border-radius: 100px;
+  background-color: mediumseagreen;
 }
 </style>
