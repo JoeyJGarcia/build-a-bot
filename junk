@@ -1,0 +1,19 @@
+total 1080
+-rwxrwxrwx    1 joey  staff     160 Aug 18 22:54 .editorconfig
+-rwxrwxrwx    1 joey  staff      30 Aug 18 22:54 .browserslistrc
+-rwxrwxrwx    1 joey  staff      76 Aug 18 22:54 babel.config.js
+-rwxrwxrwx    1 joey  staff     323 Aug 18 22:54 README.md
+-rwxrwxrwx    1 joey  staff     231 Aug 18 23:03 .gitignore
+-rwxrwxrwx@   1 joey  staff    8196 Aug 19 09:40 .DS_Store
+drwxrwxrwx    4 joey  staff     128 Aug 20 13:20 public
+drwxrwxrwx    3 joey  staff      96 Aug 20 13:20 .vscode
+drwxrwxrwx  876 joey  staff   28032 Aug 22 22:13 node_modules
+-rwxrwxrwx    1 joey  staff     754 Aug 22 22:13 package.json
+-rwxrwxrwx    1 joey  staff  507437 Aug 22 22:13 package-lock.json
+-rwxrwxrwx    1 joey  staff     376 Aug 22 22:52 .eslintrc.js
+drwxrwxrwx   15 joey  staff     480 Aug 22 23:41 src
+-rw-r--r--    1 joey  staff     156 Aug 22 23:41 vue.config.js
+drwxrwxrwx   12 joey  staff     384 Aug 26 09:35 ..
+drwxrwxrwx   12 joey  staff     384 Aug 26 10:26 .git
+drwxrwxrwx   18 joey  staff     576 Aug 26 10:32 .
+-rw-r--r--    1 joey  staff       0 Aug 26 10:32 junk
